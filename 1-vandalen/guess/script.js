@@ -6,40 +6,55 @@ window.onload = function()
 	var max = 100;
 	var min = 0;
 	var secret = Math.floor( Math.random() * (max-min)+1 )+min;
-
+	var count = 0;
 	
 	// I denna funktion ska du skriva koden för att hantera "spelet"
 	var guess = function(number)
 	{
+
 		console.log("Det hemliga talet: " + secret); // Du når den yttre variabeln secret innifrån funktionen.
 		console.log("Du gissade: " + number); // Detta nummer är det som användaren gissade på.
 			
 		// Plats för förändring.
 		
-			if(number < secret)
+		if (isNaN(number) === false)
 		{
-			return "Det hemliga talet är högre än :" + number;
-		}
-		
-		if (number > secret)
-		{
-			return "Det hemliga talet är lägre än :" + number;
-		}
-		
-		if (number > 100 || number < 0)
-		{
-			return number + " är inte i intervallet 0-100!";
-		}
 
-		if (number === secret)
-		{
-			return "Du gissade rätt! Det hemliga talet är: " + secret;
+			
+			
+				if (number > 100 || number < 0)
+			{
+				return [false, number + " är utanför intervallet 0 - 100!"];
+			}
+			
+				if(number < secret)
+			{
+				++count;
+				return [false, "Det hemliga talet är högre än: " + number];
+			}
+			
+			if (number > secret)
+			{
+				++count;
+				return [false, "Det hemliga talet är lägre än: " + number];
+			}
+			
+			if (+number === secret)
+			{
+				++count;
+				return [true, "Du gissade rätt! Det hemliga talet var: " + secret + ". Du gissade " + count + " gånger för att hitta det!"];
+			}
+			// Returnera exempelvis: 
+			// [true, "Grattis du vann! Det hemliga talet var X och du behövde Y gissningar för att hitta det."]
+			// [false, "Det hemliga talet är högre!"]
+			// [false, "Det hemliga talet är lägre!"]
+			// [false, "Talet är utanför intervallet 0 - 100"]		
 		}
-		// Returnera exempelvis: 
-		// [true, "Grattis du vann! Det hemliga talet var X och du behövde Y gissningar för att hitta det."]
-		// [false, "Det hemliga talet är högre!"]
-		// [false, "Det hemliga talet är lägre!"]
-		// [false, "Talet är utanför intervallet 0 - 100"]		
+	else
+	{
+		return [false, number + " är ingen siffra!"];
+	}
+
 	};
 	
 	// ------------------------------------------------------------------------------
