@@ -11,6 +11,11 @@ window.onload = function(){
 		var myArray = [];
 		myArray = str.split("");
 		
+		if(str === "")
+		{
+			throw new Error("Skriv in någonting. Noob.");
+		}
+		
 		for (var i = 0; i < str.length; i++) 
 		{
 		     if (myArray[i] === myArray[i].toUpperCase())
@@ -24,7 +29,10 @@ window.onload = function(){
 		}
 		
 		str = myArray.toString();
-		str.split(",");
+		str = str.split(",").join("");
+		str = str.split("a").join( "#");
+		str = str.split("A").join( "#");
+		
 		// Returnera den konverterade strängen.
 		
 		return [str];
