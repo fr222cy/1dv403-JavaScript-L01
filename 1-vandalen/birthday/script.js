@@ -3,14 +3,17 @@
 window.onload = function(){
 
 	
-	var birthday = function(date){
+	var birthday = function(date)
+	{
 		
-
+console.log(date);
 
 			// Din kod här.
+		
+			var nowDate = new Date();
+			var userDate = new Date(date);
 
-
-
+			console.log(userDate.getTime() - nowDate.Gettime());
 
 	};
 	// ------------------------------------------------------------------------------
@@ -27,7 +30,8 @@ window.onload = function(){
 
 		p.classList.remove( "error");
 
-		try {
+		try 
+		{
 			var answer = birthday(input.value) // Läser in texten från textrutan och skickar till funktionen "convertString"
 			var message;
 			switch (answer){
