@@ -16,6 +16,12 @@ window.onload = function(){
 			
 		    myBirthday = Math.ceil((userDate.getTime() - nowDate.getTime())/day);
 		    
+		    if (date === "")
+		    {
+		    	throw new Error ("Ange ett legit datum mannen!")
+		    }
+		    
+		    
 		    //Om myBirthday får ett negativt värde så lägger vi till ett år.
 			if (myBirthday <= -1)
 			{
