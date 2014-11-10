@@ -6,15 +6,41 @@ window.onload = function(){
 	var birthday = function(date)
 	{
 		
-console.log(date);
-
-			// Din kod här.
-		
 			var nowDate = new Date();
 			var userDate = new Date(date);
-
-			console.log(userDate.getTime() - nowDate.Gettime());
-
+			var day = (1000 * 60 * 60 * 24);
+            var myBirthday = 0;
+			// Ger userDate året som nowDate har.
+			userDate.setFullYear(nowDate.getFullYear());
+			
+			
+		    myBirthday = Math.ceil((userDate.getTime() - nowDate.getTime())/day);
+		    
+		    //Om myBirthday får ett negativt värde så lägger vi till ett år.
+			if (myBirthday <= -1)
+			{
+				return myBirthday + 365;
+			}
+			
+			// Om myBirthday är samma som dagens datum, så returnerar vi case 0.
+			if (myBirthday === nowDate)
+			{
+				return 0;
+			}
+			// Om myBirthday + en dag är lika med dagens datum. så returnerar vi case 1.
+			if (myBirthday + 1 === nowDate)
+			{
+				return 1;
+			}
+		
+		
+		
+			
+			
+			
+			
+			
+			
 	};
 	// ------------------------------------------------------------------------------
 
