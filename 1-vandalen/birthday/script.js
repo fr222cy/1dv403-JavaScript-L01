@@ -16,10 +16,15 @@ window.onload = function(){
 			
 		    myBirthday = Math.ceil((userDate.getTime() - nowDate.getTime())/day);
 		    
+		  
+		    
+		 
+		    
 		    if (date === "")
 		    {
 		    	throw new Error ("Ange ett legit datum mannen!")
 		    }
+		    
 		    
 		    
 		    //Om myBirthday får ett negativt värde så lägger vi till ett år.
@@ -29,12 +34,12 @@ window.onload = function(){
 			}
 			
 			// Om myBirthday är samma som dagens datum, så returnerar vi case 0.
-			if (myBirthday === nowDate)
+			if (myBirthday === 0)
 			{
 				return 0;
 			}
 			// Om myBirthday + en dag är lika med dagens datum. så returnerar vi case 1.
-			if (myBirthday + 1 === nowDate)
+			if (myBirthday === 1)
 			{
 				return 1;
 			}

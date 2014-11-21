@@ -13,7 +13,7 @@ window.onload = function(){
 		
 		if(str === "")
 		{
-			throw new Error("Skriv in någonting. Noob.");
+			throw new Error("Skriv in någonting...");
 		}
 		
 		for (var i = 0; i < str.length; i++) 
