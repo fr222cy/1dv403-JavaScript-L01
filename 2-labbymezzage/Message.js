@@ -29,11 +29,15 @@ function Message(message, date)
    
     Message.prototype.getHTMLText = function()
     {
-      
+      return this.getText().replace(/[\n\r]/g, "<br/>");
     };
     
      Message.prototype.getDateText = function()
     {
-      
+       var hours = this.getDate().getHours();
+       var minutes = this.getDate().getMinutes();
+       var seconds = this.getDate().getSeconds();
+       
+       return hours +" " +minutes+ " "+seconds;
     };
 }
