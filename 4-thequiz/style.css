@@ -1,0 +1,21 @@
+body
+{
+    margin-left:600px;
+    margin-right:500px;
+    margin-top:300px;
+}
+#gameBox
+{
+    border:1px solid black;
+    height:600px;
+    width:400px;
+}
+#questionBox
+{
+    border:1px solid black;
+    height:200px;
+}
+#answerBox
+{
+    border:1px solid black;
+}
