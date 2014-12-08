@@ -38,6 +38,6 @@ function Message(message, date)
        var minutes = this.getDate().getMinutes();
        var seconds = this.getDate().getSeconds();
        
-       return hours +" " +minutes+ " "+seconds;
+       return hours +":" +minutes+ ":"+seconds;
     };
 }

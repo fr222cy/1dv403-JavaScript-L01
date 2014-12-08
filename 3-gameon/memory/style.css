@@ -1,0 +1,68 @@
+body
+{
+background-color:darkRed;
+}
+
+#gameBox
+{
+    background-color:white;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5px;
+    width:506px;
+    height:600px;
+    text-align:center;
+    border:5px solid black;
+    
+}
+#theGame 
+{
+    margin-top:30px;
+    border-top:1px dashed black;
+}
+
+#start
+{
+   
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:40px;
+    text-decoration:none;
+    color:darkRed;
+}
+#counterWindow
+{
+    float:left;
+    color:darkRed;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:30px;
+    height:200px;
+    width:180px;
+    border: 3px solid black;
+    background-color:white;
+}
+#counterWindow p
+{
+   
+}
+h1
+{
+    text-align:center;
+    font-size:50px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+    margin-top:-10px;
+    margin-bottom:-10px;
+}
+td
+{
+    border:1px solid black;
+}
+
+a
+{
+    display:block;
+}
+#restart
+{
+    cursor:pointer;
+}

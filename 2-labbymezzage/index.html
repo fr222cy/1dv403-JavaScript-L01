@@ -1,7 +1,7 @@
 <html>
 <head>
     	<meta charset="UTF-8" />
-    	<title>Labby Mezzage!</title>
+    	<title>Matrix Chat-Site</title>
     	<link rel="stylesheet" href="style.css">
         <script src="Message.js"></script>
          <script src="MessageBoard.js"></script>
@@ -10,14 +10,16 @@
             <fieldset id="fieldset">
                 <h1>Chat to the real world! </h1>
                 
-                <textarea id="form"name="Text:" rows="3" cols="20"></textarea></div>
-                <input id ="send" type="submit" value="Send" >
+                <textarea id="form"name="Text:" rows="3" cols="20" maxlength="350" value="Enter your text here"></textarea></div>
+                <input id ="send" class="imgPic hover" type="button"  >
+                <p id="countMessage">Number of Messages: 0</p>
                 </div>
+                 <embed name="CTD" src="pics/ctd.mp3" loop="false" hidden="true" autostart="true">
             </fieldset>
-                <section id="po">
-                    
-                   
-                </section>
-
+              <div id="box">
+               
+                  
+              </div>
+               
     </body>
 </html>
