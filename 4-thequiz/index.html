@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>The Quiz</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+   
 </head>
 
 <body>
@@ -13,19 +13,22 @@
     <div id="gameBox">
 
         <div id="questionBox">
-
+             <h2 id="displayQ"></h2>
         </div>
         
-        <div id="answerBox">
-            <textarea id="form" rows="3" cols="50" value="Skriv ditt svar här."></textarea>
-            <input id="send" type="submit" value="Submit">
-        </div>
+        
+            <form id="answerBox">
+                <input id="form" type="text" name=""/>
+                <input id="submit" type="submit" value="Gissa"/>
+            </form>
+            
+        <div id="infoBox"></div>
         
 
     </div>
 
     </div>
-
+  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

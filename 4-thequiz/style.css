@@ -1,21 +1,64 @@
 body
 {
-    margin-left:600px;
+    font-family:helvetica;
+    margin-left:500px;
     margin-right:500px;
-    margin-top:300px;
+    margin-top:200px;
+    background-image: url(pics/background.jpg);
+    background-size:100%;
 }
 #gameBox
 {
+    background-color:deepSkyBlue;
     border:1px solid black;
-    height:600px;
+    border-radius:10px;
+    height:320px;
     width:400px;
 }
 #questionBox
 {
-    border:1px solid black;
+    
     height:200px;
+    border-bottom:1px solid black;
+}
+#questionBox p
+{
+    text-align:center;
 }
 #answerBox
 {
-    border:1px solid black;
+    
+    height:60px;
+}
+#infoBox
+{
+    height:40px;
+    font-size:25px;
+    border-top:1px solid black;
+    text-align:center;
+}
+#displayQ
+{
+    text-align:center;
+}
+#send
+{
+    margin-left:150px;
+}
+#form
+{
+    width:394px;
+    max-width:394px;
+    max-height:45px;
+}
+.resWindow
+{
+    width:300px;
+    height:400px;
+}
+#submit
+{
+    margin-left:150px;
+    width:100px;
+    height:39px;
 }
