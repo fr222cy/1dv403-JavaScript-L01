@@ -11,7 +11,6 @@ body, html
 {
     background-image: url(pics/desktopBackground.jpg);
     background-size:cover;    
-    background-color:PaleGoldenRod;
     width:100%;
     height:100%;
 }
@@ -25,14 +24,14 @@ body, html
    height:340px;
    border:2px solid black;
    border-radius:5px;
-   background-color:inherit;
+   background:inherit;
 }
 
 .windowTop
 {
     height:30px;
     background-color:inherit;
-    text-align:center;
+   
 }
 
 .windowContent
@@ -48,16 +47,22 @@ body, html
     height:33px;
     background-color:inherit;
 }
-
 .topTitle
 {
- 
+    float:left;
+    font-size:25px;
+}
+.topTitle img
+{
+    float:left;
+    width:30px;
+    height:30px;
 }
 
 .topClose
 {
   float:right;
-  margin-top:-17px;
+ 
 }
 
 .deleteIcon:hover
@@ -75,6 +80,8 @@ body, html
     width:100%;
     height:50px;
     background: rgba(50, 0, 0, 0.6);
+    background-image: url(pics/vertical.png);
+    background-attachment: fixed;
 }
 
 .startBar img
@@ -88,3 +95,4 @@ body, html
     width:46px;
     height:46px;
 }
+

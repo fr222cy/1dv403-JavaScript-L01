@@ -2,7 +2,7 @@
 
 
 
-function Window(desk, name) 
+function Window(desk, name, image, content) 
 {
     var template = document.querySelector(".temp"); 
     var windowTemplate = template.content.querySelector(".window");
@@ -14,9 +14,13 @@ function Window(desk, name)
     this.desk = desk;
     this.w = w;
     
-    windowTitle.innerHTML = name;
+   var topImage = image.cloneNode(true);
     
-     desk.element.appendChild(w);
+    
+     
+    windowTitle.innerHTML = name;
+    windowTitle.appendChild(topImage);
+    desk.element.appendChild(w);
     
     
     closeButton.addEventListener("click", function () 

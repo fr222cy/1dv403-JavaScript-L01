@@ -6,7 +6,7 @@ function StartBar(desk)
     this.desk = desk;
     this.start = {x:0,y:0};
 }
-
+    
 StartBar.prototype.addApp = function(name, url)
 {
     
@@ -17,12 +17,28 @@ StartBar.prototype.addApp = function(name, url)
     
     image.addEventListener("click", function() 
     {
-    var w = new Window(self.desk, name);
+    
+     self.nameCheck(name);
+    var w = new Window(self.desk, name, image);
     
     self.start.x += 10;
     self.start.y += 10;
-    
+   
     w.setPosition(self.start.x, self.start.y);
     })
     
 };
+
+StartBar.prototype.nameCheck = function(name)
+{
+  
+    if (name === "Gallery")
+    {
+        var gallery = new Gallery();
+    }
+    
+    if (name === "Memory")
+    {
+        console.log("Har kommer memoryt.")
+    }
+}
