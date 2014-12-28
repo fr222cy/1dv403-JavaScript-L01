@@ -18,7 +18,7 @@ StartBar.prototype.addApp = function(name, url)
     image.addEventListener("click", function() 
     {
     
-     self.nameCheck(name);
+     self.nameCheck(name, image);
     var w = new Window(self.desk, name, image);
     
     self.start.x += 10;
@@ -29,12 +29,12 @@ StartBar.prototype.addApp = function(name, url)
     
 };
 
-StartBar.prototype.nameCheck = function(name)
+StartBar.prototype.nameCheck = function(name, image)
 {
   
     if (name === "Gallery")
     {
-        var gallery = new Gallery();
+        new Gallery();
     }
     
     if (name === "Memory")

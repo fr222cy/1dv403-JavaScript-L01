@@ -2,7 +2,7 @@
 
 
 
-function Window(desk, name, image, content) 
+function Window(desk, name, image) 
 {
     var template = document.querySelector(".temp"); 
     var windowTemplate = template.content.querySelector(".window");
@@ -10,7 +10,7 @@ function Window(desk, name, image, content)
     var windowTitle = w.querySelector(".topTitle");
     var closeButton = w.querySelector(".deleteIcon");
     var self = this;
-    
+
     this.desk = desk;
     this.w = w;
     
@@ -29,6 +29,13 @@ function Window(desk, name, image, content)
     });
    
 }
+
+//Window.prototype.content = function()
+//{
+   
+//}
+
+
 
 Window.prototype.close = function() 
 {
