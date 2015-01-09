@@ -36,7 +36,6 @@ Gallery.prototype.getImages = function(desk, w) {
                 //When I click on a picture in the array...
                 image.addEventListener("click", function(){
                 
-                
                 self.imageViewer(desk, this);    
                 
                 });
@@ -59,27 +58,17 @@ Gallery.prototype.imageViewer = function(desk, img) {
     
     var image = document.createElement("img");
     image.src = img.picture;
-    console.log(image);
-    
-    var minPic = document.createElement("img");
-    minPic.src = "pics/camera.png";
-    
-    var ivw = new Window(desk, "Image Viewer", minPic);
-    
-    
-    
    
-    img.className = "imageViewerPic"
-    
-   
-    
+
+    var ivw = new Window(desk, "Image Viewer", "pics/camera.png");
+    img.className = "imageViewerPic";
     
     var windowContent = ivw.w.querySelector(".windowContent");
-    windowContent.parentNode.className ="imageViewer"
+    windowContent.parentNode.className ="imageViewer";
     windowContent.appendChild(image);
     
     ivw.windowFooter.removeChild(ivw.loader);
- 
+   
     
   
     

@@ -8,16 +8,17 @@ function Window(desk, name, image) {
     var w = this.windowTemplate.cloneNode(true);
     this.windowTitle = w.querySelector(".topTitle");
     var closeButton = w.querySelector(".deleteIcon");
-        
+    var topImage = w.querySelector(".icon");
         
     this.desk = desk;
     this.w = w;
     
-    var topImage = image.cloneNode(true);
+    
+    topImage.src = image;
         
         
     this.windowTitle.innerHTML = name;
-    this.windowTitle.appendChild(topImage);
+    
     desk.element.appendChild(w);
     this.createLoader();
     this.dragable();
@@ -69,7 +70,7 @@ Window.prototype.dragable = function () {
         
         window.addEventListener('mousemove', divMove, true);
     };
-    
+    console.log(this.w);
     var windowTop = this.w.querySelector(".windowTop");
     windowTop.addEventListener("mousedown", mouseDown, false);
     window.addEventListener('mouseup', mouseUp, false);
