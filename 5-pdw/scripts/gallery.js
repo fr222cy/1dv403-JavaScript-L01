@@ -27,13 +27,16 @@ Gallery.prototype.getImages = function(desk, w) {
                 var aTag = document.createElement("a");
                 aTag.className = "galleryA";
                 aTag.href = "#";
-                image.className = picArray[i].URL;
+                image.className = "galleryImages";
+                
                 image.src = picArray[i].thumbURL;
-             
+                image.picture = picArray[i].URL;
+
                 
                 //When I click on a picture in the array...
                 image.addEventListener("click", function(){
-               
+                
+                
                 self.imageViewer(desk, this);    
                 
                 });
@@ -54,21 +57,29 @@ Gallery.prototype.getImages = function(desk, w) {
                 
 Gallery.prototype.imageViewer = function(desk, img) {
     
-    var name = "Image Viewer";
-    var minPic = document.createElement("img");
-    minPic.src = "pics/camera.png"
     var image = document.createElement("img");
-    image.src = img.className;
-                
-    var ivw = new Window(desk, name, minPic);
-            
+    image.src = img.picture;
+    console.log(image);
+    
+    var minPic = document.createElement("img");
+    minPic.src = "pics/camera.png";
+    
+    var ivw = new Window(desk, "Image Viewer", minPic);
+    
+    
+    
+   
+    img.className = "imageViewerPic"
+    
+   
     
     
     var windowContent = ivw.w.querySelector(".windowContent");
-    
+    windowContent.parentNode.className ="imageViewer"
     windowContent.appendChild(image);
+    
     ivw.windowFooter.removeChild(ivw.loader);
-    ivw.matchFullsizeImage(image.width, image.height);
+ 
     
   
     

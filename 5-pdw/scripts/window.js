@@ -75,11 +75,3 @@ Window.prototype.dragable = function () {
     window.addEventListener('mouseup', mouseUp, false);
 };
 
-//If window needs to be fullsize to display an image.
-Window.prototype.matchFullsizeImage = function (width, height) {
-    console.log(width + " " + height);
-    
-    this.w.style.width = width + "px";
-    this.w.style.height = height + "px";
-    
-};
