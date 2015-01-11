@@ -59,16 +59,16 @@ Gallery.prototype.imageViewer = function(desk, img) {
     var image = document.createElement("img");
     image.src = img.picture;
    
-
+   
     var ivw = new Window(desk, "Image Viewer", "pics/camera.png");
     img.className = "imageViewerPic";
-    
+     
     var windowContent = ivw.w.querySelector(".windowContent");
     windowContent.parentNode.className ="imageViewer";
     windowContent.appendChild(image);
     
     ivw.windowFooter.removeChild(ivw.loader);
-   
+   ivw.setPosition(10, 10);
     
   
     

@@ -13,6 +13,7 @@ function Window(desk, name, image) {
     this.desk = desk;
     this.w = w;
     
+    this.content = w.querySelector(".windowContent");
     
     topImage.src = image;
         
@@ -57,22 +58,25 @@ Window.prototype.dragable = function () {
     var divMove = function (e){
       w.style.top = e.clientY-offsetY + 'px';
       w.style.left = e.clientX-offsetX + 'px';
+        console.log(this.w);
     
     };
     
     var mouseUp = function () {
-        window.removeEventListener('mousemove', divMove, true);
+        window.removeEventListener('mousemove', divMove);
     };
     
     var mouseDown = function (e){
         offsetX = e.clientX - parseInt(w.style.left);
         offsetY = e.clientY - parseInt(w.style.top);
         
-        window.addEventListener('mousemove', divMove, true);
+        window.addEventListener('mousemove', divMove);
     };
     console.log(this.w);
+    
     var windowTop = this.w.querySelector(".windowTop");
-    windowTop.addEventListener("mousedown", mouseDown, false);
-    window.addEventListener('mouseup', mouseUp, false);
+    
+    windowTop.addEventListener("mousedown", mouseDown);
+    window.addEventListener('mouseup', mouseUp);
 };
 

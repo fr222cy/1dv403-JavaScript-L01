@@ -42,16 +42,3 @@ StartBar.prototype.open = function(appName) {
     }
 }
 
-//Checks what apps we are opening.
-StartBar.prototype.nameCheck = function(name, image, w) {
-
-    if (name === "Gallery") {
-
-        new Gallery(this.desk, w);
-
-    }
-
-    if (name === "Memory") {
-        console.log("Har kommer memoryt.")
-    }
-}
